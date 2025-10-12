@@ -1,0 +1,179 @@
+baseURL = "https://TomDavis0310.github.io/Do_An_Mon_Hoc_Lap_Trinh_Mang/"
+title = "Blog của Nguyễn Võ Xuân Dương"
+languageCode = "vi"
+theme = "PaperMod"
+enableRobotsTXT = true
+
+[pagination]
+pagerSize = 9
+
+buildDrafts = false
+buildFuture = false
+buildExpired = false
+enableEmoji = true
+pygmentsUseClasses = true
+
+[services]
+[services.googleAnalytics]
+ID = "G-XXXXXXXXXX"  # Thay bằng ID Google Analytics của bạn
+
+[minify]
+disableXML = true
+minifyOutput = true
+
+[params]
+env = "production"
+title = "Blog của Nguyễn Võ Xuân Dương"
+description = "Blog cá nhân về lập trình Java, JavaScript, Spring Boot và phát triển Web. Chia sẻ kiến thức, kinh nghiệm và hành trình học tập của sinh viên CNTT HUTECH - Nguyễn Võ Xuân Dương."
+keywords = ["Java", "JavaScript", "Spring Boot", "Web Development", "NodeJS", "Programming", "HUTECH", "Lập trình", "OOP", "Exception Handling", "ES6", "DOM"]
+author = "Nguyễn Võ Xuân Dương"
+images = ["/Do_An_Mon_Hoc_Lap_Trinh_Mang/images/profile.jpg"]
+DateFormat = "02/01/2006"
+defaultTheme = "auto"
+disableThemeToggle = false
+ShowReadingTime = true
+ShowShareButtons = true
+ShowPostNavLinks = true
+ShowBreadCrumbs = true
+ShowCodeCopyButtons = true
+ShowWordCount = true
+ShowRssButtonInSectionTermList = true
+UseHugoToc = true
+disableSpecial1stPost = false
+disableScrollToTop = false
+comments = true
+hidemeta = false
+hideSummary = false
+showtoc = true
+tocopen = true
+
+# [params.homeInfoParams]
+# Title = "Xin chào, tôi là Nguyễn Võ Xuân Dương 👋"
+# Content = """
+# **Sinh viên năm 3 ngành Công nghệ thông tin** – Đại học Công nghệ TP.HCM (HUTECH).
+# 
+# 🎯 **Hướng chuyên môn:** Lập trình Web & Ứng dụng
+# 
+# 💡 **Mục tiêu nghề nghiệp:** Phát triển kỹ năng Fullstack, đặc biệt là Java, Spring Boot, và JavaScript (NodeJS).
+# 
+# 📚 Blog này là nơi tôi chia sẻ kiến thức về lập trình, những điều học được và kinh nghiệm trong quá trình học tập.
+# """
+
+[[params.socialIcons]]
+name = "github"
+url = "https://github.com/TomDavis0310"
+
+[[params.socialIcons]]
+name = "linkedin"
+url = "https://linkedin.com/in/xuanduong"
+
+[[params.socialIcons]]
+name = "facebook"
+url = "https://www.facebook.com/duong.xuan.534908/"
+
+[[params.socialIcons]]
+name = "email"
+url = "mailto:doduong0949447395@gmail.com"
+
+[params.profileMode]
+enabled = true
+title = "Nguyễn Võ Xuân Dương"
+subtitle = "💻 Lập trình viên Web | 🎓 Sinh viên CNTT HUTECH"
+imageUrl = "/Do_An_Mon_Hoc_Lap_Trinh_Mang/images/profile.jpg"
+imageWidth = 60
+imageHeight = 60
+imageTitle = "Nguyễn Võ Xuân Dương"
+
+[[params.profileMode.buttons]]
+name = "📝 Blog"
+url = "/Do_An_Mon_Hoc_Lap_Trinh_Mang/posts"
+
+[[params.profileMode.buttons]]
+name = "🏷️ Tags"
+url = "/Do_An_Mon_Hoc_Lap_Trinh_Mang/tags"
+
+[[params.profileMode.buttons]]
+name = "🔍 Search"
+url = "/Do_An_Mon_Hoc_Lap_Trinh_Mang/search"
+
+[params.assets]
+favicon = "/images/favicon.ico"
+favicon16x16 = "/images/favicon-16x16.png"
+favicon32x32 = "/images/favicon-32x32.png"
+apple_touch_icon = "/images/apple-touch-icon.png"
+safari_pinned_tab = "/images/safari-pinned-tab.svg"
+
+[params.label]
+text = "Home"
+icon = "/images/favicon.ico"
+iconHeight = 35
+
+[params.cover]
+hidden = false
+hiddenInList = false
+hiddenInSingle = false
+
+[params.editPost]
+URL = "https://github.com/TomDavis0310/Do_An_Mon_Hoc_Lap_Trinh_Mang/tree/main/blog%20c%C3%A1%20nh%C3%A2n/content"
+Text = "Đề xuất thay đổi"
+appendFilePath = true
+
+[params.fuseOpts]
+isCaseSensitive = false
+shouldSort = true
+location = 0
+distance = 1000
+threshold = 0.4
+minMatchCharLength = 0
+keys = ["title", "permalink", "summary", "content"]
+
+[[menu.main]]
+identifier = "home"
+name = "Home"
+url = "/"
+weight = 1
+
+[[menu.main]]
+identifier = "blog"
+name = "Blog"
+url = "/posts/"
+weight = 2
+
+[[menu.main]]
+identifier = "tags"
+name = "Tags"
+url = "/tags/"
+weight = 3
+
+[[menu.main]]
+identifier = "search"
+name = "Search"
+url = "/search/"
+weight = 4
+
+[outputs]
+home = ["HTML", "RSS", "JSON"]
+
+[markup]
+[markup.highlight]
+anchorLineNos = false
+codeFences = true
+guessSyntax = true
+hl_Lines = ""
+lineAnchors = ""
+lineNoStart = 1
+lineNos = true
+lineNumbersInTable = true
+noClasses = false
+style = "monokai"
+tabWidth = 4
+
+[sitemap]
+changefreq = "weekly"
+filename = "sitemap.xml"
+priority = 0.5
+
+[taxonomies]
+category = "categories"
+tag = "tags"
+series = "series"

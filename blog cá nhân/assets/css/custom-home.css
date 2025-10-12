@@ -1,0 +1,340 @@
+/* ========================================
+   🎨 CUSTOM HOME PAGE STYLES (Fixed & Enhanced)
+   Modern, clean, glowing portfolio look
+======================================== */
+
+:root {
+  --primary-gradient: linear-gradient(135deg, #0b5bd7 0%, #6b7280 100%);
+  --accent-cyan: #0b5bd7;
+  --accent-purple: #0b5bd7;
+  --text-primary: #e5e7eb;
+  --text-secondary: #9ca3af;
+  --bg-dark: #0f172a;
+  --card-bg: rgba(30, 41, 59, 0.5);
+  --shadow-glow: 0 0 40px rgba(11, 91, 215, 0.3);
+}
+
+/* ========================================
+   📱 MAIN LAYOUT
+======================================== */
+body {
+  background: linear-gradient(180deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
+  min-height: 100vh;
+  color: var(--text-primary);
+  font-family: 'Inter', 'Poppins', sans-serif;
+  overflow-x: hidden;
+}
+
+/* ========================================
+   👤 PROFILE HERO SECTION
+======================================== */
+.profile {
+  text-align: center;
+  padding: 60px 20px 100px;
+  position: relative;
+}
+
+.profile::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(11, 91, 215, 0.15) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.profile .profile_inner {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* ========================================
+   🖼️ AVATAR SECTION (Fixed & Perfectly Centered)
+======================================== */
+.profile .profile-avatar {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 28px;
+  border-radius: 50%;
+  border: 3px solid rgba(11, 91, 215, 0.4);
+  box-shadow:
+    0 0 30px rgba(11, 91, 215, 0.4),
+    0 10px 30px rgba(0, 0, 0, 0.5),
+    inset 0 0 10px rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: avatar-glow 3s ease-in-out infinite;
+  transition: all 0.4s ease;
+}
+
+.profile .profile-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top; /* canh giữa theo chiều dọc, hơi lên 1 chút */
+  border-radius: 50%;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+  transition: transform 0.4s ease;
+}
+
+/* Hover effects */
+.profile .profile-avatar:hover {
+  transform: scale(1.05);
+  border-color: rgba(11, 91, 215, 0.8);
+  box-shadow:
+    0 0 80px rgba(11, 91, 215, 0.6),
+    0 25px 70px rgba(0, 0, 0, 0.6),
+    inset 0 0 30px rgba(255, 255, 255, 0.15);
+}
+
+.profile .profile-avatar:hover img {
+  transform: scale(1.05);
+}
+
+@keyframes avatar-glow {
+  0%, 100% {
+    box-shadow:
+      0 0 60px rgba(11, 91, 215, 0.4),
+      0 20px 60px rgba(0, 0, 0, 0.5),
+      inset 0 0 20px rgba(255, 255, 255, 0.1);
+  }
+  50% {
+    box-shadow:
+      0 0 80px rgba(107, 114, 128, 0.5),
+      0 20px 60px rgba(0, 0, 0, 0.5),
+      inset 0 0 25px rgba(255, 255, 255, 0.15);
+  }
+}
+
+/* ========================================
+   📝 TYPOGRAPHY
+======================================== */
+.profile h1 {
+  font-size: 48px;
+  font-weight: 800;
+  margin: 0 0 16px;
+  background: linear-gradient(135deg, #0b5bd7 0%, #6b7280 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  animation: title-slide-in 0.8s ease-out;
+}
+
+@keyframes title-slide-in {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.profile span {
+  display: block;
+  font-size: 20px;
+  color: #e5e7eb;
+  margin-bottom: 32px;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* ========================================
+   🔗 SOCIAL ICONS
+======================================== */
+.profile .social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin: 28px 0 40px;
+  flex-wrap: wrap;
+}
+
+.profile .social-icons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: rgba(11, 91, 215, 0.1);
+  border: 2px solid rgba(11, 91, 215, 0.3);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.profile .social-icons a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--primary-gradient);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.profile .social-icons a:hover {
+  transform: translateY(-4px) scale(1.1);
+  border-color: var(--accent-purple);
+  box-shadow: 0 10px 30px rgba(11, 91, 215, 0.4);
+}
+
+.profile .social-icons a:hover::before {
+  opacity: 1;
+}
+
+.profile .social-icons a svg {
+  width: 24px;
+  height: 24px;
+  position: relative;
+  z-index: 1;
+  transition: all 0.3s ease;
+}
+
+.profile .social-icons a:hover svg {
+  stroke: #fff;
+  transform: scale(1.1);
+}
+
+/* ========================================
+   🎯 CTA BUTTONS
+======================================== */
+.profile .buttons {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 16px;
+}
+
+.profile .button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 32px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  background: rgba(11, 91, 215, 0.15);
+  border: 2px solid rgba(11, 91, 215, 0.4);
+  border-radius: 12px;
+  text-decoration: none;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+}
+
+.profile .button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: var(--primary-gradient);
+  transition: left 0.4s ease;
+  z-index: 0;
+}
+
+.profile .button:hover {
+  transform: translateY(-2px);
+  border-color: var(--accent-purple);
+  box-shadow: 0 10px 40px rgba(11, 91, 215, 0.3);
+}
+
+.profile .button:hover::before {
+  left: 0;
+}
+
+.profile .button .button-inner {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.profile .button:active {
+  transform: translateY(0);
+}
+
+/* ========================================
+   📱 RESPONSIVE DESIGN
+======================================== */
+@media (max-width: 768px) {
+  .profile {
+    padding: 40px 16px 60px;
+  }
+  
+  .profile .profile-avatar {
+    width: 50px;
+    height: 50px;
+    border-width: 2px;
+  }
+  
+  .profile h1 {
+    font-size: 32px;
+  }
+  
+  .profile span {
+    font-size: 16px;
+    margin-bottom: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .profile h1 {
+    font-size: 28px;
+  }
+  
+  .profile span {
+    font-size: 14px;
+  }
+  
+  .profile .button {
+    width: 100%;
+    max-width: 280px;
+  }
+}
+
+/* ========================================
+   💬 INFO BOX (OPTIONAL)
+======================================== */
+.home-info {
+  margin: 32px auto;
+  padding: 24px 28px;
+  max-width: 800px;
+  background: var(--card-bg);
+  border: 1px solid rgba(11, 91, 215, 0.2);
+  border-radius: 16px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.home-info .entry-header h1 {
+  color: var(--text-primary);
+  font-size: 24px;
+  margin-bottom: 16px;
+}
+
+.home-info .entry-content {
+  color: var(--text-secondary);
+  line-height: 1.7;
+}

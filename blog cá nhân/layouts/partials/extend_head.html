@@ -1,0 +1,81 @@
+<!-- Custom head elements for SEO and analytics -->
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<!-- Custom CSS with cache busting -->
+<link rel="stylesheet" href="/Do_An_Mon_Hoc_Lap_Trinh_Mang/css/custom.css?v={{ now.Unix }}">
+{{- $customHomeCSS := resources.Get "css/custom-home.css" -}}
+{{- if $customHomeCSS -}}
+{{- $customHomeCSS = $customHomeCSS | resources.Minify | resources.Fingerprint -}}
+<link rel="stylesheet" href="{{ $customHomeCSS.RelPermalink }}" integrity="{{ $customHomeCSS.Data.Integrity }}">
+{{- end -}}
+
+<!-- Meta tags for better SEO -->
+<meta name="author" content="Nguyễn Võ Xuân Dương">
+<meta name="robots" content="index, follow">
+<meta name="googlebot" content="index, follow">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Blog của Nguyễn Võ Xuân Dương">
+<meta property="og:locale" content="vi_VN">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:creator" content="@xuanduong">
+
+<!-- Favicon -->
+<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+
+<!-- Canonical URL -->
+{{ if .Permalink }}
+<link rel="canonical" href="{{ .Permalink }}">
+{{ end }}
+
+<!-- Schema.org markup -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Blog",
+  "name": "Blog của Nguyễn Võ Xuân Dương",
+  "description": "Blog cá nhân về lập trình Java, JavaScript và phát triển Web",
+  "author": {
+    "@type": "Person",
+    "name": "Nguyễn Võ Xuân Dương",
+    "jobTitle": "Sinh viên CNTT",
+    "affiliation": {
+      "@type": "Organization",
+      "name": "HUTECH"
+    }
+  },
+  "url": "{{ .Site.BaseURL }}"
+}
+</script>
+
+<!-- Analytics Scripts -->
+{{ with .Site.Config.Services.GoogleAnalytics.ID }}
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id={{ . }}"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', '{{ . }}');
+</script>
+{{ end }}
+
+<!-- Reading progress bar -->
+<div id="progress-bar" style="width: 0%;"></div>
+<script>
+window.addEventListener('scroll', function() {
+  var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+  var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  var scrolled = (winScroll / height) * 100;
+  document.getElementById("progress-bar").style.width = scrolled + "%";
+});
+</script>
