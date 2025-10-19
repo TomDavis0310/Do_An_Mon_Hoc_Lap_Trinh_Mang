@@ -12,6 +12,11 @@
 {{- $customHomeCSS = $customHomeCSS | resources.Minify | resources.Fingerprint -}}
 <link rel="stylesheet" href="{{ $customHomeCSS.RelPermalink }}" integrity="{{ $customHomeCSS.Data.Integrity }}">
 {{- end -}}
+{{- $themeOverrideCSS := resources.Get "css/theme-override.css" -}}
+{{- if $themeOverrideCSS -}}
+{{- $themeOverrideCSS = $themeOverrideCSS | resources.Minify | resources.Fingerprint -}}
+<link rel="stylesheet" href="{{ $themeOverrideCSS.RelPermalink }}" integrity="{{ $themeOverrideCSS.Data.Integrity }}">
+{{- end -}}
 
 <!-- Meta tags for better SEO -->
 <meta name="author" content="Nguyễn Võ Xuân Dương">
@@ -69,6 +74,15 @@
 </script>
 {{ end }}
 
+<!-- Posts Filter CSS & JS -->
+{{- if eq .Section "posts" }}
+{{- $postsFilterCSS := resources.Get "css/posts-filter.css" -}}
+{{- if $postsFilterCSS -}}
+{{- $postsFilterCSS = $postsFilterCSS | resources.Minify | resources.Fingerprint -}}
+<link rel="stylesheet" href="{{ $postsFilterCSS.RelPermalink }}" integrity="{{ $postsFilterCSS.Data.Integrity }}">
+{{- end -}}
+{{- end }}
+
 <!-- Reading progress bar -->
 <div id="progress-bar" style="width: 0%;"></div>
 <script>
@@ -79,3 +93,8 @@ window.addEventListener('scroll', function() {
   document.getElementById("progress-bar").style.width = scrolled + "%";
 });
 </script>
+
+<!-- Posts Filter JS -->
+{{- if eq .Section "posts" }}
+<script defer src="{{ "js/posts-filter.js" | absURL }}"></script>
+{{- end }}

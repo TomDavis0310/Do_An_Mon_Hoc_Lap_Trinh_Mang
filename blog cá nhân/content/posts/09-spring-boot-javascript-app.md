@@ -7,11 +7,16 @@ tags: ["Java", "JavaScript", "Spring Boot", "Web Development", "Tutorial"]
 categories: ["Java", "JavaScript", "Web Development"]
 description: "Hướng dẫn chi tiết từng bước tạo ứng dụng web fullstack với Java Spring Boot backend và JavaScript frontend - Todo List Application."
 cover:
-    image: "/images/spring-boot-javascript.jpg"
+    image: "https://images.unsplash.com/photo-1555099962-4199c345e5dd?w=1200&h=600&fit=crop"
     alt: "Spring Boot + JavaScript Web App"
     caption: "Fullstack Development với Spring Boot và JavaScript"
 keywords: ["Spring Boot", "Java web app", "fullstack", "REST API", "JavaScript fetch"]
 ---
+
+<div style="text-align: center; margin: 30px 0;">
+  <img src="https://www.baeldung.com/wp-content/uploads/2021/03/Spring-Boot-REST-API.png" alt="Spring Boot REST API" style="max-width: 100%; border-radius: 10px;">
+  <p style="font-style: italic; color: #666;">Kiến trúc ứng dụng Fullstack với Spring Boot và JavaScript</p>
+</div>
 
 ## Giới thiệu
 
@@ -21,6 +26,11 @@ Trong bài viết này, chúng ta sẽ xây dựng một **Todo List Application
 - **Database**: H2 (in-memory database)
 
 ## Bước 1: Tạo Spring Boot Project
+
+<div style="text-align: center; margin: 20px 0;">
+  <img src="https://spring.io/img/projects/spring-boot.svg" alt="Spring Boot" width="200">
+  <p style="font-style: italic; color: #666;">Spring Boot - Framework Java mạnh mẽ nhất</p>
+</div>
 
 ### 1.1. Sử dụng Spring Initializr
 

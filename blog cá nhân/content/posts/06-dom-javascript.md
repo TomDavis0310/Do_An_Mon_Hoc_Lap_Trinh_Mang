@@ -7,11 +7,16 @@ tags: ["JavaScript", "DOM", "Web Development"]
 categories: ["JavaScript"]
 description: "Tìm hiểu về DOM (Document Object Model) - cách JavaScript tương tác với HTML để tạo website động và interactive."
 cover:
-    image: "/images/javascript-dom.jpg"
+    image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1200&h=600&fit=crop"
     alt: "DOM in JavaScript"
     caption: "DOM - Cầu nối giữa JavaScript và HTML"
 keywords: ["DOM JavaScript", "DOM là gì", "JavaScript DOM manipulation", "querySelector"]
 ---
+
+<div style="text-align: center; margin: 30px 0;">
+  <img src="https://www.w3schools.com/whatis/img_htmltree.gif" alt="DOM Tree Structure" style="max-width: 100%; border-radius: 10px;">
+  <p style="font-style: italic; color: #666;">Cấu trúc cây DOM - Mô hình đối tượng tài liệu</p>
+</div>
 
 ## DOM là gì?
 
@@ -36,6 +41,16 @@ Document
 ```
 
 ## Selecting Elements (Chọn phần tử)
+
+<div style="background: #f0f8ff; padding: 20px; border-radius: 10px; margin: 20px 0; border-left: 4px solid #4285f4;">
+  <h4 style="margin-top: 0; color: #4285f4;">💡 Mẹo chọn Element</h4>
+  <p><strong>querySelector/querySelectorAll</strong> được khuyến nghị vì:</p>
+  <ul>
+    <li>Sử dụng CSS Selector quen thuộc</li>
+    <li>Linh hoạt và mạnh mẽ hơn</li>
+    <li>Code dễ đọc và maintain hơn</li>
+  </ul>
+</div>
 
 ### 1. getElementById
 

@@ -7,17 +7,26 @@ tags: ["Java", "Programming", "Web Development"]
 categories: ["Java"]
 description: "Tìm hiểu về ngôn ngữ lập trình Java - một trong những ngôn ngữ phổ biến nhất thế giới, lịch sử phát triển và ứng dụng thực tế."
 cover:
-    image: "/images/java-intro.jpg"
+    image: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=1200&h=600&fit=crop"
     alt: "Java Programming Language"
     caption: "Java - Write Once, Run Anywhere"
 keywords: ["Java", "lập trình Java", "Java là gì", "học Java"]
 ---
+
+<div style="text-align: center; margin: 30px 0;">
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg" alt="Java Logo" width="150" height="150">
+</div>
 
 ## Java là gì?
 
 **Java** là một ngôn ngữ lập trình hướng đối tượng (Object-Oriented Programming - OOP) được phát triển bởi Sun Microsystems vào năm 1995, hiện thuộc sở hữu của Oracle Corporation. Java được thiết kế với triết lý "Write Once, Run Anywhere" (WORA) - viết một lần, chạy mọi nơi.
 
 ## Đặc điểm nổi bật của Java
+
+<div style="text-align: center; margin: 20px 0;">
+  <img src="https://miro.medium.com/v2/resize:fit:1400/1*wMT4BmmSkviM7peBkOaG6A.png" alt="Java Architecture" style="max-width: 100%; border-radius: 10px;">
+  <p style="font-style: italic; color: #666;">Kiến trúc Java: JDK, JRE, JVM</p>
+</div>
 
 ### 1. Độc lập nền tảng
 Java code được biên dịch thành bytecode, có thể chạy trên bất kỳ máy tính nào có cài đặt Java Virtual Machine (JVM), không phụ thuộc vào hệ điều hành.
@@ -44,6 +53,11 @@ Java loại bỏ nhiều tính năng phức tạp như con trỏ (pointer) trong
 Java có nhiều cơ chế bảo mật tích hợp sẵn, kiểm tra lỗi nghiêm ngặt trong quá trình biên dịch và runtime.
 
 ## Ứng dụng của Java
+
+<div style="text-align: center; margin: 20px 0;">
+  <img src="https://i0.wp.com/javachallengers.com/wp-content/uploads/2019/12/java_applications.png" alt="Java Applications" style="max-width: 100%; border-radius: 10px;">
+  <p style="font-style: italic; color: #666;">Các lĩnh vực ứng dụng Java trong thực tế</p>
+</div>
 
 ### 1. Phát triển ứng dụng Web
 - **Spring Framework**: Framework mạnh mẽ cho enterprise applications

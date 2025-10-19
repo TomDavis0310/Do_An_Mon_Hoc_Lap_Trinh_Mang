@@ -1,0 +1,126 @@
+{{- define "main" }}
+
+<header class="page-header">
+  {{- partial "breadcrumbs.html" . }}
+  <h1>{{ .Title }}</h1>
+  {{- if .Description }}
+  <div class="post-description">
+    {{ .Description | markdownify }}
+  </div>
+  {{- end }}
+</header>
+
+{{/* Filter Tabs */}}
+<div class="posts-filter-tabs">
+  <div class="filter-tabs">
+    <button class="tab-button active" data-tab="search">
+      <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="11" cy="11" r="8"></circle>
+        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+      </svg>
+      <span>Search</span>
+    </button>
+    <button class="tab-button" data-tab="tags">
+      <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path>
+        <line x1="7" y1="7" x2="7.01" y2="7"></line>
+      </svg>
+      <span>Tags</span>
+    </button>
+    <button class="tab-button" data-tab="categories">
+      <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
+      </svg>
+      <span>Categories</span>
+    </button>
+  </div>
+
+  {{/* Search Tab Content */}}
+  <div class="tab-content active" id="search-tab">
+    <div class="search-container">
+      <input type="text" id="searchInput" placeholder="Tìm kiếm bài viết..." aria-label="search" autocomplete="off">
+      <button id="clearSearch" class="clear-btn" style="display: none;">×</button>
+    </div>
+    <div id="searchResults" class="search-results"></div>
+  </div>
+
+  {{/* Tags Tab Content */}}
+  <div class="tab-content" id="tags-tab">
+    <div class="tags-filter">
+      <button class="filter-tag active" data-tag="all">Tất cả</button>
+      {{- range $name, $taxonomy := .Site.Taxonomies.tags }}
+      <button class="filter-tag" data-tag="{{ $name }}">
+        {{ $name }} <span class="tag-count">({{ len $taxonomy }})</span>
+      </button>
+      {{- end }}
+    </div>
+  </div>
+
+  {{/* Categories Tab Content */}}
+  <div class="tab-content" id="categories-tab">
+    <div class="categories-filter">
+      <button class="filter-category active" data-category="all">Tất cả</button>
+      {{- range $name, $taxonomy := .Site.Taxonomies.categories }}
+      <button class="filter-category" data-category="{{ $name }}">
+        {{ $name }} <span class="category-count">({{ len $taxonomy }})</span>
+      </button>
+      {{- end }}
+    </div>
+  </div>
+</div>
+
+{{/* Posts List */}}
+<div id="posts-container" class="posts-list">
+  {{- $pages := .RegularPages }}
+  {{- $paginator := .Paginate $pages }}
+  
+  {{- range $index, $page := $paginator.Pages }}
+  <article class="post-entry" data-tags="{{ delimit $page.Params.tags "," }}" data-categories="{{ delimit $page.Params.categories "," }}">
+    {{- $isHidden := ($page.Param "cover.hiddenInList") | default ($page.Param "cover.hidden") | default false }}
+    {{- partial "cover.html" (dict "cxt" $page "IsSingle" false "isHidden" $isHidden) }}
+    <header class="entry-header">
+      <h2 class="entry-hint-parent">
+        {{ $page.Title }}
+        {{- if $page.Draft }}
+        <span class="entry-hint" title="Draft">
+          <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" fill="currentColor">
+            <path d="M160-410v-60h300v60H160Zm0-165v-60h470v60H160Zm0-165v-60h470v60H160Zm360 580v-123l221-220q9-9 20-13t22-4q12 0 23 4.5t20 13.5l37 37q9 9 13 20t4 22q0 11-4.5 22.5T862.09-380L643-160H520Zm300-263-37-37 37 37ZM580-220h38l121-122-18-19-19-18-122 121v38Zm141-141-19-18 37 37-18-19Z" />
+          </svg>
+        </span>
+        {{- end }}
+      </h2>
+    </header>
+    {{- if (ne ($page.Param "hideSummary") true) }}
+    <div class="entry-content">
+      <p>{{ $page.Summary | plainify | htmlUnescape }}{{ if $page.Truncated }}...{{ end }}</p>
+    </div>
+    {{- end }}
+    {{- if not ($page.Param "hideMeta") }}
+    <footer class="entry-footer">
+      {{- partial "post_meta.html" $page -}}
+    </footer>
+    {{- end }}
+    <a class="entry-link" aria-label="post link to {{ $page.Title | plainify }}" href="{{ $page.Permalink }}"></a>
+  </article>
+  {{- end }}
+
+  <div id="no-results" style="display: none; text-align: center; padding: 40px;">
+    <p>Không tìm thấy bài viết nào phù hợp.</p>
+  </div>
+</div>
+
+{{/* Pagination */}}
+{{- if gt $paginator.TotalPages 1 }}
+<footer class="page-footer">
+  <nav class="pagination">
+    {{- if $paginator.HasPrev }}
+    <a class="prev" href="{{ $paginator.Prev.URL | absURL }}">« Trang trước</a>
+    {{- end }}
+    {{- if $paginator.HasNext }}
+    <a class="next" href="{{ $paginator.Next.URL | absURL }}">Trang sau »</a>
+    {{- end }}
+  </nav>
+</footer>
+{{- end }}
+
+{{- end }}{{/* end main */}}

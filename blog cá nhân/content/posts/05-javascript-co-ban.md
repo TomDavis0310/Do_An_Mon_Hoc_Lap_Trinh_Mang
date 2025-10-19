@@ -7,11 +7,15 @@ tags: ["JavaScript", "Web Development", "Programming"]
 categories: ["JavaScript"]
 description: "Tìm hiểu về JavaScript - ngôn ngữ lập trình phổ biến nhất cho Web Development, cú pháp cơ bản và các khái niệm quan trọng."
 cover:
-    image: "/images/javascript-intro.jpg"
+    image: "https://images.unsplash.com/photo-1579468118864-1b9ea3c0db4a?w=1200&h=600&fit=crop"
     alt: "JavaScript Programming"
     caption: "JavaScript - Ngôn ngữ của Web"
 keywords: ["JavaScript", "JS cơ bản", "học JavaScript", "JavaScript là gì"]
 ---
+
+<div style="text-align: center; margin: 30px 0;">
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="JavaScript Logo" width="150" height="150">
+</div>
 
 ## JavaScript là gì?
 
@@ -22,6 +26,11 @@ keywords: ["JavaScript", "JS cơ bản", "học JavaScript", "JavaScript là gì
 - **JavaScript**: Hành vi (Behavior)
 
 ## Đặc điểm của JavaScript
+
+<div style="text-align: center; margin: 20px 0;">
+  <img src="https://www.freecodecamp.org/news/content/images/2021/06/Ekran-Resmi-2019-11-18-18.08.13.png" alt="HTML CSS JavaScript" style="max-width: 100%; border-radius: 10px;">
+  <p style="font-style: italic; color: #666;">HTML, CSS và JavaScript - Ba trụ cột của Web</p>
+</div>
 
 ### 1. Ngôn ngữ thông dịch (Interpreted)
 - Không cần biên dịch

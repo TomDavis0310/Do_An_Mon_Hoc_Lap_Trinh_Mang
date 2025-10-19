@@ -7,11 +7,16 @@ tags: ["Java", "OOP", "Programming"]
 categories: ["Java"]
 description: "Tìm hiểu chi tiết về 4 trọng tâm của lập trình hướng đối tượng: Encapsulation, Inheritance, Polymorphism và Abstraction trong Java."
 cover:
-    image: "/images/java-oop.jpg"
+    image: "https://images.unsplash.com/photo-1542831371-29b0f74f9713?w=1200&h=600&fit=crop"
     alt: "Object-Oriented Programming in Java"
     caption: "OOP - Nền tảng của lập trình hiện đại"
 keywords: ["OOP Java", "lập trình hướng đối tượng", "Java class", "Java inheritance"]
 ---
+
+<div style="text-align: center; margin: 30px 0;">
+  <img src="https://media.geeksforgeeks.org/wp-content/uploads/20220608123735/OOPSConceptsinJava1.jpg" alt="OOP Pillars" style="max-width: 100%; border-radius: 10px;">
+  <p style="font-style: italic; color: #666;">4 Trụ cột của lập trình hướng đối tượng</p>
+</div>
 
 ## Lập trình hướng đối tượng (OOP) là gì?
 
@@ -20,6 +25,11 @@ keywords: ["OOP Java", "lập trình hướng đối tượng", "Java class", "J
 ## 4 Trụ cột của OOP
 
 ### 1. Encapsulation (Đóng gói)
+
+<div style="text-align: center; margin: 20px 0;">
+  <img src="https://media.geeksforgeeks.org/wp-content/uploads/Encapsulation.jpg" alt="Encapsulation" style="max-width: 100%; border-radius: 10px;">
+  <p style="font-style: italic; color: #666;">Đóng gói - Che giấu dữ liệu và chỉ cung cấp interface</p>
+</div>
 
 **Đóng gói** là việc che giấu dữ liệu bên trong class và chỉ cho phép truy cập thông qua các phương thức public.
 

@@ -7,11 +7,16 @@ tags: ["Java", "JavaScript", "Programming", "Comparison"]
 categories: ["Java", "JavaScript"]
 description: "Phân tích chi tiết sự khác biệt giữa Java và JavaScript: cú pháp, ứng dụng, hiệu năng, và khi nào nên dùng ngôn ngữ nào."
 cover:
-    image: "/images/java-vs-javascript.jpg"
+    image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=1200&h=600&fit=crop"
     alt: "Java vs JavaScript Comparison"
     caption: "Java vs JavaScript - Giống tên nhưng khác biệt hoàn toàn"
 keywords: ["Java vs JavaScript", "so sánh Java JavaScript", "khác biệt Java JavaScript"]
 ---
+
+<div style="text-align: center; margin: 30px 0;">
+  <img src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/20210326171826/Java-Vs-JavaScript.png" alt="Java vs JavaScript" style="max-width: 100%; border-radius: 10px;">
+  <p style="font-style: italic; color: #666;">Java vs JavaScript - Hai ngôn ngữ khác biệt hoàn toàn</p>
+</div>
 
 ## Giới thiệu
 

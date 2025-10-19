@@ -31,18 +31,18 @@ images = ["/Do_An_Mon_Hoc_Lap_Trinh_Mang/images/profile.jpg"]
 DateFormat = "02/01/2006"
 defaultTheme = "auto"
 disableThemeToggle = false
-ShowReadingTime = true
+ShowReadingTime = false
 ShowShareButtons = true
 ShowPostNavLinks = true
 ShowBreadCrumbs = true
 ShowCodeCopyButtons = true
-ShowWordCount = true
+ShowWordCount = false
 ShowRssButtonInSectionTermList = true
 UseHugoToc = true
 disableSpecial1stPost = false
 disableScrollToTop = false
 comments = true
-hidemeta = false
+hidemeta = true
 hideSummary = false
 showtoc = true
 tocopen = true
@@ -78,23 +78,64 @@ url = "mailto:doduong0949447395@gmail.com"
 [params.profileMode]
 enabled = true
 title = "Nguyễn Võ Xuân Dương"
-subtitle = "💻 Lập trình viên Web | 🎓 Sinh viên CNTT HUTECH"
+subtitle = "💻 Software Developer | 🎓 Sinh viên năm 4 CNTT HUTECH"
 imageUrl = "/Do_An_Mon_Hoc_Lap_Trinh_Mang/images/profile.jpg"
-imageWidth = 60
-imageHeight = 60
+imageWidth = 200
+imageHeight = 280
 imageTitle = "Nguyễn Võ Xuân Dương"
+bio = "Sinh viên năm 4 chuyên ngành Công nghệ Thông tin tại Đại học Công nghệ TP.HCM (HUTECH). Đam mê phát triển ứng dụng web và học hỏi công nghệ mới."
+
+[[params.profileMode.info]]
+icon = "📍"
+text = "TP. Hồ Chí Minh, Việt Nam"
+
+[[params.profileMode.info]]
+icon = "📧"
+text = "doduong0949447395@gmail.com"
+
+[[params.profileMode.info]]
+icon = "📞"
+text = "094.944.7395"
+
+[[params.profileMode.info]]
+icon = "🎂"
+text = "03/10/2004"
+
+[[params.profileMode.info]]
+icon = "🌐"
+text = "TOEIC 650"
+
+[[params.profileMode.skills]]
+name = "Java"
+
+[[params.profileMode.skills]]
+name = "JavaScript"
+
+[[params.profileMode.skills]]
+name = "Spring Boot"
+
+[[params.profileMode.skills]]
+name = "MySQL"
+
+[[params.profileMode.skills]]
+name = "HTML/CSS"
+
+[[params.profileMode.skills]]
+name = "REST API"
+
+[[params.profileMode.skills]]
+name = "Git/GitHub"
+
+[[params.profileMode.skills]]
+name = "Bootstrap"
 
 [[params.profileMode.buttons]]
 name = "📝 Blog"
 url = "/Do_An_Mon_Hoc_Lap_Trinh_Mang/posts"
 
 [[params.profileMode.buttons]]
-name = "🏷️ Tags"
-url = "/Do_An_Mon_Hoc_Lap_Trinh_Mang/tags"
-
-[[params.profileMode.buttons]]
-name = "🔍 Search"
-url = "/Do_An_Mon_Hoc_Lap_Trinh_Mang/search"
+name = "👤 Về tôi"
+url = "/Do_An_Mon_Hoc_Lap_Trinh_Mang/about"
 
 [params.assets]
 favicon = "/images/favicon.ico"
@@ -140,21 +181,19 @@ url = "/posts/"
 weight = 2
 
 [[menu.main]]
-identifier = "tags"
-name = "Tags"
-url = "/tags/"
+identifier = "about"
+name = "About"
+url = "/about/"
 weight = 3
-
-[[menu.main]]
-identifier = "search"
-name = "Search"
-url = "/search/"
-weight = 4
 
 [outputs]
 home = ["HTML", "RSS", "JSON"]
 
 [markup]
+[markup.goldmark]
+[markup.goldmark.renderer]
+unsafe = true
+
 [markup.highlight]
 anchorLineNos = false
 codeFences = true

@@ -7,11 +7,16 @@ tags: ["Java", "Exception Handling", "Programming"]
 categories: ["Java"]
 description: "Hướng dẫn chi tiết về xử lý ngoại lệ (Exception Handling) trong Java: try-catch, throw, throws, custom exception và best practices."
 cover:
-    image: "/images/java-exception.jpg"
+    image: "https://images.unsplash.com/photo-1551650975-87deedd944c3?w=1200&h=600&fit=crop"
     alt: "Exception Handling in Java"
     caption: "Xử lý lỗi chuyên nghiệp trong Java"
 keywords: ["Java exception", "try catch", "throw throws", "xử lý lỗi Java"]
 ---
+
+<div style="text-align: center; margin: 30px 0;">
+  <img src="https://media.geeksforgeeks.org/wp-content/uploads/20230613122108/Exception-Handling-in-Java.png" alt="Exception Hierarchy" style="max-width: 100%; border-radius: 10px;">
+  <p style="font-style: italic; color: #666;">Hệ thống phân cấp Exception trong Java</p>
+</div>
 
 ## Exception là gì?
 

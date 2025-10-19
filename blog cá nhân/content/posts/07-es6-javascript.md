@@ -7,11 +7,16 @@ tags: ["JavaScript", "ES6", "Modern JavaScript"]
 categories: ["JavaScript"]
 description: "Khám phá các tính năng mới và quan trọng trong ES6 (ECMAScript 2015) và các phiên bản sau: Arrow Functions, Destructuring, Promises, Async/Await..."
 cover:
-    image: "/images/es6-features.jpg"
+    image: "https://images.unsplash.com/photo-1627398242454-45a1465c2479?w=1200&h=600&fit=crop"
     alt: "ES6 JavaScript Features"
     caption: "ES6 - Modern JavaScript"
 keywords: ["ES6", "JavaScript ES6", "Arrow Functions", "Promises", "Async Await"]
 ---
+
+<div style="text-align: center; margin: 30px 0;">
+  <img src="https://miro.medium.com/v2/resize:fit:1400/1*JDKfjOVH4K6T8Mzr8b8tQQ.png" alt="ES6 Features" style="max-width: 100%; border-radius: 10px;">
+  <p style="font-style: italic; color: #666;">Những tính năng nổi bật của ES6</p>
+</div>
 
 ## ES6 (ECMAScript 2015) là gì?
 
@@ -333,6 +338,11 @@ student.study();
 ```
 
 ### 10. Promises
+
+<div style="text-align: center; margin: 20px 0;">
+  <img src="https://miro.medium.com/v2/resize:fit:1400/1*8RdTM5Gjsbga_D1JiTAA9A.png" alt="JavaScript Promises" style="max-width: 100%; border-radius: 10px;">
+  <p style="font-style: italic; color: #666;">Promise States - Pending, Fulfilled, Rejected</p>
+</div>
 
 ```javascript
 // Tạo Promise

@@ -1,4 +1,4 @@
-{{/* Custom Profile/Hero Layout - Workspace override */}}
+{{/* Custom Profile/Hero Layout - Enhanced CV Style */}}
 <div class="profile">
   {{- with site.Params.profileMode }}
   <div class="profile_inner">
@@ -11,7 +11,35 @@
     {{- end }}
     
     <h1>{{ .title | default site.Title | markdownify }}</h1>
-    <span>{{ .subtitle | markdownify }}</span>
+    <span class="profile-subtitle">{{ .subtitle | markdownify }}</span>
+    
+    {{- if .bio }}
+    <div class="profile-bio">
+      {{ .bio | markdownify }}
+    </div>
+    {{- end }}
+    
+    {{- if .info }}
+    <div class="profile-info">
+      {{- range .info }}
+      <div class="info-item">
+        <span class="info-icon">{{ .icon }}</span>
+        <span class="info-text">{{ .text }}</span>
+      </div>
+      {{- end }}
+    </div>
+    {{- end }}
+    
+    {{- if .skills }}
+    <div class="profile-skills">
+      <h3 class="skills-title">🛠️ Kỹ năng</h3>
+      <div class="skills-tags">
+        {{- range .skills }}
+        <span class="skill-tag">{{ . }}</span>
+        {{- end }}
+      </div>
+    </div>
+    {{- end }}
     
     {{- partial "social_icons.html" -}}
 

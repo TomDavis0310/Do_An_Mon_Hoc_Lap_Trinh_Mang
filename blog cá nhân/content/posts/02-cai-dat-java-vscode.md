@@ -7,17 +7,27 @@ tags: ["Java", "VSCode", "Setup", "Tutorial"]
 categories: ["Java", "Tools"]
 description: "Hướng dẫn chi tiết từng bước cài đặt JDK, môi trường phát triển Java và Visual Studio Code để bắt đầu lập trình Java."
 cover:
-    image: "/images/java-setup.jpg"
+    image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1200&h=600&fit=crop"
     alt: "Java Development Setup"
     caption: "Cài đặt môi trường Java chuyên nghiệp"
 keywords: ["cài đặt Java", "JDK", "VSCode", "Java development"]
 ---
+
+<div style="text-align: center; margin: 30px 0;">
+  <img src="https://code.visualstudio.com/assets/docs/languages/java/java-overview.png" alt="VSCode Java" style="max-width: 100%; border-radius: 10px;">
+  <p style="font-style: italic; color: #666;">Visual Studio Code với Java Extension Pack</p>
+</div>
 
 ## Giới thiệu
 
 Để bắt đầu lập trình Java, bạn cần cài đặt **JDK (Java Development Kit)** và một **IDE/Editor**. Trong bài viết này, tôi sẽ hướng dẫn sử dụng **Visual Studio Code** - một editor miễn phí, nhẹ và mạnh mẽ.
 
 ## Bước 1: Cài đặt JDK
+
+<div style="background: #f5f5f5; padding: 20px; border-radius: 10px; margin: 20px 0;">
+  <img src="https://www.oracle.com/a/ocom/img/cb71-java-logo.png" alt="Java JDK" style="max-width: 200px; display: block; margin: 0 auto;">
+  <p style="text-align: center; margin-top: 10px; font-weight: bold;">Java Development Kit (JDK)</p>
+</div>
 
 ### 1.1. Tải JDK
 

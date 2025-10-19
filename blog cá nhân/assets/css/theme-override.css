@@ -1,0 +1,562 @@
+/* ============================================
+   THEME COLOR OVERRIDE
+   Đảm bảo màu chữ hiển thị tốt ở cả Light & Dark mode
+   ============================================ */
+
+/* ============================================
+   LIGHT MODE - Màu mặc định
+   ============================================ */
+:root {
+    /* Text colors for light mode */
+    --theme-text-primary: #1e293b;
+    --theme-text-secondary: #475569;
+    --theme-text-tertiary: #64748b;
+    --theme-text-muted: #94a3b8;
+    
+    /* Background colors for light mode */
+    --theme-bg-primary: #ffffff;
+    --theme-bg-secondary: #f8fafc;
+    --theme-bg-tertiary: #f1f5f9;
+    
+    /* Border colors */
+    --theme-border: #e2e8f0;
+    --theme-border-hover: #cbd5e1;
+    
+    /* Link colors */
+    --theme-link: #0b5bd7;
+    --theme-link-hover: #0a4fb3;
+    
+    /* Code colors */
+    --theme-code-bg: #f1f5f9;
+    --theme-code-text: #0b5bd7;
+}
+
+/* ============================================
+   DARK MODE - Màu cho chế độ tối
+   ============================================ */
+.dark {
+    /* Text colors for dark mode */
+    --theme-text-primary: #f1f5f9;
+    --theme-text-secondary: #cbd5e1;
+    --theme-text-tertiary: #94a3b8;
+    --theme-text-muted: #64748b;
+    
+    /* Background colors for dark mode */
+    --theme-bg-primary: #0f172a;
+    --theme-bg-secondary: #1e293b;
+    --theme-bg-tertiary: #334155;
+    
+    /* Border colors */
+    --theme-border: #334155;
+    --theme-border-hover: #475569;
+    
+    /* Link colors */
+    --theme-link: #60a5fa;
+    --theme-link-hover: #93c5fd;
+    
+    /* Code colors */
+    --theme-code-bg: #1e293b;
+    --theme-code-text: #60a5fa;
+}
+
+/* ============================================
+   GLOBAL TEXT COLORS
+   ============================================ */
+
+/* Main content text */
+.post-content,
+.page-content,
+article,
+.entry-content,
+.post-single .post-content {
+    color: var(--theme-text-primary) !important;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6,
+.post-title,
+.entry-title {
+    color: var(--theme-text-primary) !important;
+}
+
+/* Paragraphs */
+p {
+    color: var(--theme-text-secondary) !important;
+}
+
+/* Links */
+a {
+    color: var(--theme-link) !important;
+}
+
+a:hover {
+    color: var(--theme-link-hover) !important;
+}
+
+/* ============================================
+   POST ENTRY CARDS
+   ============================================ */
+.post-entry {
+    background: var(--theme-bg-secondary) !important;
+    border-color: var(--theme-border) !important;
+}
+
+.post-entry .entry-header h2,
+.post-entry .entry-title {
+    color: var(--theme-text-primary) !important;
+}
+
+.post-entry .entry-content,
+.post-entry .entry-summary {
+    color: var(--theme-text-secondary) !important;
+}
+
+.post-entry .post-meta {
+    color: var(--theme-text-tertiary) !important;
+}
+
+/* ============================================
+   HEADER & NAVIGATION
+   ============================================ */
+.nav,
+header {
+    background: var(--theme-bg-primary) !important;
+    border-bottom-color: var(--theme-border) !important;
+}
+
+.logo a,
+.main-nav a,
+.menu a {
+    color: var(--theme-text-secondary) !important;
+}
+
+.logo a:hover,
+.main-nav a:hover,
+.menu a:hover {
+    color: var(--theme-text-primary) !important;
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+footer {
+    background: var(--theme-bg-secondary) !important;
+    color: var(--theme-text-secondary) !important;
+}
+
+footer a {
+    color: var(--theme-link) !important;
+}
+
+footer a:hover {
+    color: var(--theme-link-hover) !important;
+}
+
+/* ============================================
+   SIDEBAR & WIDGETS
+   ============================================ */
+.sidebar,
+.widget {
+    background: var(--theme-bg-secondary) !important;
+    color: var(--theme-text-secondary) !important;
+}
+
+.widget-title {
+    color: var(--theme-text-primary) !important;
+}
+
+/* ============================================
+   BREADCRUMBS
+   ============================================ */
+.breadcrumbs,
+.breadcrumb {
+    color: var(--theme-text-tertiary) !important;
+}
+
+.breadcrumbs a {
+    color: var(--theme-link) !important;
+}
+
+/* ============================================
+   TABLE OF CONTENTS
+   ============================================ */
+.toc,
+#TableOfContents {
+    background: var(--theme-bg-secondary) !important;
+    border-color: var(--theme-border) !important;
+}
+
+.toc a,
+#TableOfContents a {
+    color: var(--theme-text-secondary) !important;
+}
+
+.toc a:hover,
+#TableOfContents a:hover {
+    color: var(--theme-link) !important;
+}
+
+/* ============================================
+   BLOCKQUOTE
+   ============================================ */
+blockquote {
+    background: var(--theme-bg-secondary) !important;
+    border-left-color: var(--theme-link) !important;
+    color: var(--theme-text-secondary) !important;
+}
+
+/* ============================================
+   CODE BLOCKS
+   ============================================ */
+code {
+    background: var(--theme-code-bg) !important;
+    color: var(--theme-code-text) !important;
+}
+
+pre {
+    background: var(--theme-bg-tertiary) !important;
+    border-color: var(--theme-border) !important;
+}
+
+pre code {
+    background: transparent !important;
+}
+
+/* Inline code */
+p code,
+li code,
+td code {
+    background: var(--theme-code-bg) !important;
+    color: var(--theme-code-text) !important;
+}
+
+/* ============================================
+   TABLES
+   ============================================ */
+table {
+    border-color: var(--theme-border) !important;
+}
+
+th {
+    background: var(--theme-bg-secondary) !important;
+    color: var(--theme-text-primary) !important;
+    border-color: var(--theme-border) !important;
+}
+
+td {
+    color: var(--theme-text-secondary) !important;
+    border-color: var(--theme-border) !important;
+}
+
+tr:hover {
+    background: var(--theme-bg-secondary) !important;
+}
+
+/* ============================================
+   SEARCH
+   ============================================ */
+.search-input,
+#searchInput {
+    background: var(--theme-bg-secondary) !important;
+    color: var(--theme-text-primary) !important;
+    border-color: var(--theme-border) !important;
+}
+
+.search-input::placeholder,
+#searchInput::placeholder {
+    color: var(--theme-text-muted) !important;
+}
+
+/* ============================================
+   TAGS
+   ============================================ */
+.tag,
+.post-tags a,
+.terms-tags a {
+    color: white !important; /* Tags luôn có chữ trắng */
+}
+
+/* ============================================
+   PAGINATION
+   ============================================ */
+.pagination,
+.page-item {
+    color: var(--theme-text-secondary) !important;
+}
+
+.pagination a,
+.page-link {
+    color: var(--theme-link) !important;
+    background: var(--theme-bg-secondary) !important;
+    border-color: var(--theme-border) !important;
+}
+
+.pagination a:hover,
+.page-link:hover {
+    color: var(--theme-link-hover) !important;
+    background: var(--theme-bg-tertiary) !important;
+}
+
+.page-item.active .page-link {
+    background: var(--theme-link) !important;
+    color: white !important;
+}
+
+/* ============================================
+   BUTTONS - Giữ nguyên gradient
+   ============================================ */
+/* Buttons giữ nguyên màu gradient từ custom CSS */
+
+/* ============================================
+   ARCHIVE & LIST PAGES
+   ============================================ */
+.archive-year,
+.archive-month {
+    color: var(--theme-text-primary) !important;
+}
+
+.archive-entry {
+    border-color: var(--theme-border) !important;
+}
+
+.archive-entry-title {
+    color: var(--theme-text-primary) !important;
+}
+
+/* ============================================
+   SPECIAL ELEMENTS
+   ============================================ */
+
+/* Thông tin meta */
+.post-meta,
+.meta,
+time,
+.reading-time {
+    color: var(--theme-text-tertiary) !important;
+}
+
+/* Labels */
+label {
+    color: var(--theme-text-secondary) !important;
+}
+
+/* Form inputs */
+input,
+textarea,
+select {
+    background: var(--theme-bg-secondary) !important;
+    color: var(--theme-text-primary) !important;
+    border-color: var(--theme-border) !important;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    border-color: var(--theme-link) !important;
+}
+
+/* ============================================
+   SMOOTH TRANSITIONS
+   ============================================ */
+*,
+*::before,
+*::after {
+    transition: 
+        background-color 0.3s ease,
+        color 0.3s ease,
+        border-color 0.3s ease !important;
+}
+
+/* Disable transition for theme toggle to prevent flash */
+html.dark-mode-transition,
+html.dark-mode-transition *,
+html.dark-mode-transition *::before,
+html.dark-mode-transition *::after {
+    transition: none !important;
+}
+
+/* ============================================
+   ACCESSIBILITY
+   ============================================ */
+
+/* Focus visible for keyboard navigation */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible {
+    outline: 2px solid var(--theme-link) !important;
+    outline-offset: 2px;
+}
+
+/* Selection highlight */
+::selection {
+    background: var(--theme-link);
+    color: white;
+}
+
+::-moz-selection {
+    background: var(--theme-link);
+    color: white;
+}
+
+/* ============================================
+   PRINT STYLES
+   ============================================ */
+@media print {
+    body,
+    .post-content,
+    p,
+    h1, h2, h3, h4, h5, h6 {
+        color: black !important;
+        background: white !important;
+    }
+}
+
+/* ============================================
+   🎨 POST ENTRY GRID ENHANCEMENTS
+   Tối ưu cho bố cục 3 cột
+   ============================================ */
+
+/* Better card shadows and hover effects */
+.post-entry {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.post-entry:hover {
+    border-color: var(--theme-link) !important;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.dark .post-entry {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.dark .post-entry:hover {
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5);
+    background: rgba(30, 41, 59, 0.9) !important;
+}
+
+/* Better typography in cards */
+.post-entry .entry-header h2 {
+    transition: color 0.2s ease !important;
+    /* Hiển thị đầy đủ tiêu đề, không giới hạn số dòng */
+    -webkit-line-clamp: unset !important;
+    line-clamp: unset !important;
+    display: block !important;
+    overflow: visible !important;
+    min-height: auto !important;
+    white-space: normal !important;
+}
+
+.post-entry:hover .entry-header h2 {
+    color: var(--theme-link) !important;
+}
+
+/* Improve image overlay on hover */
+.post-entry .entry-cover {
+    position: relative;
+    overflow: hidden;
+}
+
+.post-entry .entry-cover::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.3) 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.post-entry:hover .entry-cover::after {
+    opacity: 1;
+}
+
+/* Better footer styling in cards */
+.post-entry .entry-footer {
+    opacity: 0.7;
+    transition: opacity 0.2s ease !important;
+}
+
+.post-entry:hover .entry-footer {
+    opacity: 1;
+}
+
+/* Pagination improvements */
+.page-footer {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--theme-border);
+}
+
+.pagination {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+}
+
+.pagination a {
+    padding: 10px 20px;
+    background: var(--theme-bg-secondary);
+    border: 1px solid var(--theme-border);
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.2s ease !important;
+    font-weight: 500;
+}
+
+.pagination a:hover {
+    background: var(--theme-link) !important;
+    color: white !important;
+    border-color: var(--theme-link) !important;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Card animation on load */
+@keyframes cardFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.posts-list .post-entry {
+    animation: cardFadeIn 0.5s ease-out backwards;
+}
+
+.posts-list .post-entry:nth-child(1) { animation-delay: 0.05s; }
+.posts-list .post-entry:nth-child(2) { animation-delay: 0.1s; }
+.posts-list .post-entry:nth-child(3) { animation-delay: 0.15s; }
+.posts-list .post-entry:nth-child(4) { animation-delay: 0.2s; }
+.posts-list .post-entry:nth-child(5) { animation-delay: 0.25s; }
+.posts-list .post-entry:nth-child(6) { animation-delay: 0.3s; }
+.posts-list .post-entry:nth-child(7) { animation-delay: 0.35s; }
+.posts-list .post-entry:nth-child(8) { animation-delay: 0.4s; }
+.posts-list .post-entry:nth-child(9) { animation-delay: 0.45s; }
+
+/* Better empty state */
+#no-results {
+    background: var(--theme-bg-secondary);
+    border: 2px dashed var(--theme-border);
+    border-radius: 12px;
+    padding: 60px 40px !important;
+}
+
+#no-results p {
+    font-size: 16px;
+    margin: 0;
+}
+
+/* Filter tabs integration */
+.posts-filter-tabs {
+    margin-bottom: 32px;
+}
+
