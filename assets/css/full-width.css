@@ -1,0 +1,375 @@
+/* ============================================
+   🎯 FULL WIDTH LAYOUT
+   Loại bỏ max-width để trang chiếm toàn bộ chiều rộng
+   ============================================ */
+
+/* Override main container để full width */
+.main {
+    max-width: 100% !important;
+    padding: var(--gap) 2rem !important;
+    width: 100% !important;
+}
+
+/* Profile section full width */
+.profile {
+    max-width: 100% !important;
+    padding: 60px 2rem 100px !important;
+}
+
+.profile .profile_inner {
+    max-width: 100% !important;
+    padding: 0 2rem;
+}
+
+/* Mở rộng các section khác */
+.profile-bio {
+    max-width: 1200px !important;
+}
+
+.profile-info {
+    max-width: 1200px !important;
+}
+
+.profile-skills {
+    max-width: 1200px !important;
+}
+
+.home-info {
+    max-width: 1200px !important;
+}
+
+/* Posts list full width */
+.posts-list {
+    max-width: 100% !important;
+}
+
+/* Post entry grid để tận dụng không gian rộng hơn */
+.posts-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: var(--gap);
+    width: 100%;
+}
+
+/* First entry cũng full width */
+.first-entry {
+    max-width: 100% !important;
+}
+
+/* Post single (trang chi tiết bài viết) */
+.post-single {
+    max-width: 1400px !important;
+    margin: 0 auto;
+}
+
+/* Page header full width */
+.page-header {
+    max-width: 100% !important;
+}
+
+/* Archive pages */
+.archive-month,
+.archive-year,
+.archive-entry {
+    max-width: 1400px !important;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Terms/Tags pages */
+.terms-tags {
+    max-width: 1400px !important;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Search page */
+.search-container {
+    max-width: 1400px !important;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ============================================
+   📱 RESPONSIVE ADJUSTMENTS
+   Điều chỉnh padding cho mobile
+   ============================================ */
+
+@media screen and (max-width: 1024px) {
+    .main {
+        padding: var(--gap) 1.5rem !important;
+    }
+    
+    .profile {
+        padding: 50px 1.5rem 80px !important;
+    }
+    
+    .profile .profile_inner {
+        padding: 0 1rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .main {
+        padding: var(--gap) 1rem !important;
+    }
+    
+    .profile {
+        padding: 40px 1rem 60px !important;
+    }
+    
+    .profile .profile_inner {
+        padding: 0 0.5rem;
+    }
+    
+    /* Mobile: 2 cột cho posts list */
+    .posts-list {
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .main {
+        padding: var(--gap) 0.75rem !important;
+    }
+    
+    .profile {
+        padding: 30px 0.75rem 50px !important;
+    }
+    
+    /* Mobile nhỏ: 1 cột */
+    .posts-list {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ============================================
+   🔧 ADDITIONAL OPTIMIZATIONS
+   Tối ưu cho màn hình lớn
+   ============================================ */
+
+/* Màn hình rất lớn: giữ một số giới hạn hợp lý */
+@media screen and (min-width: 1920px) {
+    .profile-bio,
+    .profile-info,
+    .profile-skills,
+    .home-info {
+        max-width: 1600px !important;
+    }
+    
+    .post-single {
+        max-width: 1600px !important;
+    }
+    
+    .archive-month,
+    .archive-year,
+    .archive-entry,
+    .terms-tags,
+    .search-container {
+        max-width: 1600px !important;
+    }
+}
+
+/* ============================================
+   🎨 BETTER SPACING
+   Cải thiện khoảng cách khi full width
+   ============================================ */
+
+/* Tăng gap cho posts list trên màn lớn */
+@media screen and (min-width: 1200px) {
+    .posts-list {
+        gap: calc(var(--gap) * 1.5);
+    }
+}
+
+/* Header và Footer giữ nguyên căn giữa nhưng full width background */
+header.header,
+footer.footer {
+    width: 100% !important;
+}
+
+header.header > nav,
+footer.footer > * {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+@media screen and (max-width: 768px) {
+    header.header > nav,
+    footer.footer > * {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
+
+/* ============================================
+   📏 COMPACT HEADER/NAV
+   Làm cho header nhỏ gọn hơn
+   ============================================ */
+
+/* Header container */
+header.header {
+    height: 50px !important;
+    min-height: 50px !important;
+}
+
+/* Nav container */
+.nav {
+    height: 50px !important;
+    padding: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+}
+
+/* Logo section */
+.logo {
+    font-size: 16px !important;
+    padding: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+}
+
+.logo img {
+    display: none !important; /* Ẩn logo image */
+}
+
+.logo a {
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    padding: 8px 0 !important;
+}
+
+/* Menu items */
+#menu {
+    display: flex !important;
+    align-items: center !important;
+    gap: 1rem !important;
+    font-size: 14px !important;
+    margin: 0 !important;
+}
+
+#menu li {
+    margin: 0 !important;
+}
+
+#menu a {
+    padding: 6px 12px !important;
+    display: inline-block !important;
+}
+
+/* Theme toggle button */
+#theme-toggle {
+    width: 36px !important;
+    height: 36px !important;
+    padding: 6px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+#theme-toggle svg {
+    width: 18px !important;
+    height: 18px !important;
+}
+
+/* Logo switches container */
+.logo-switches {
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+}
+
+/* Mobile adjustments */
+@media screen and (max-width: 768px) {
+    header.header {
+        height: 48px !important;
+        min-height: 48px !important;
+    }
+    
+    .nav {
+        height: 48px !important;
+    }
+    
+    .logo {
+        font-size: 14px !important;
+    }
+    
+    .logo img {
+        height: 20px !important;
+        width: 20px !important;
+    }
+    
+    #menu {
+        font-size: 13px !important;
+        gap: 0.75rem !important;
+    }
+    
+    #menu a {
+        padding: 4px 8px !important;
+    }
+    
+    #theme-toggle {
+        width: 32px !important;
+        height: 32px !important;
+    }
+    
+    #theme-toggle svg {
+        width: 16px !important;
+        height: 16px !important;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    header.header {
+        height: 44px !important;
+        min-height: 44px !important;
+    }
+    
+    .nav {
+        height: 44px !important;
+    }
+    
+    .logo {
+        font-size: 13px !important;
+        gap: 6px !important;
+    }
+    
+    #menu {
+        font-size: 12px !important;
+        gap: 0.5rem !important;
+    }
+    
+    #menu a {
+        padding: 3px 6px !important;
+    }
+}
+
+/* ============================================
+   🚫 HIDE SECTIONS
+   Ẩn các section không cần thiết trên trang chủ
+   ============================================ */
+
+/* Ẩn section Dự án tiêu biểu */
+.projects-section,
+.projects-timeline {
+    display: none !important;
+}
+
+/* Ẩn section Bài viết nổi bật */
+.featured-posts {
+    display: none !important;
+}
+
+/* Ẩn section Timeline */
+.timeline-section {
+    display: none !important;
+}
+
+/* Ẩn section CTA */
+.cta-section {
+    display: none !important;
+}

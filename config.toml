@@ -34,7 +34,7 @@ disableThemeToggle = false
 ShowReadingTime = false
 ShowShareButtons = true
 ShowPostNavLinks = true
-ShowBreadCrumbs = true
+ShowBreadCrumbs = false
 ShowCodeCopyButtons = true
 ShowWordCount = false
 ShowRssButtonInSectionTermList = true
@@ -76,7 +76,7 @@ name = "email"
 url = "mailto:doduong0949447395@gmail.com"
 
 [params.profileMode]
-enabled = true
+enabled = false
 title = "Nguyễn Võ Xuân Dương"
 subtitle = "💻 Software Developer | 🎓 Sinh viên năm 4 CNTT HUTECH"
 imageUrl = "/Do_An_Mon_Hoc_Lap_Trinh_Mang/images/profile.jpg"
@@ -137,16 +137,16 @@ url = "/Do_An_Mon_Hoc_Lap_Trinh_Mang/posts"
 name = "👤 Về tôi"
 url = "/Do_An_Mon_Hoc_Lap_Trinh_Mang/about"
 
-[params.assets]
-favicon = "/images/favicon.ico"
-favicon16x16 = "/images/favicon-16x16.png"
-favicon32x32 = "/images/favicon-32x32.png"
-apple_touch_icon = "/images/apple-touch-icon.png"
-safari_pinned_tab = "/images/safari-pinned-tab.svg"
+# [params.assets]
+# favicon = "/images/favicon.ico"
+# favicon16x16 = "/images/favicon-16x16.png"
+# favicon32x32 = "/images/favicon-32x32.png"
+# apple_touch_icon = "/images/apple-touch-icon.png"
+# safari_pinned_tab = "/images/safari-pinned-tab.svg"
 
 [params.label]
 text = "Home"
-icon = "/images/favicon.ico"
+# icon = "/images/favicon.ico"
 iconHeight = 35
 
 [params.cover]

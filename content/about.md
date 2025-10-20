@@ -5,7 +5,7 @@ draft: false
 showToc: true
 showReadingTime: false
 showShareButtons: true
-showBreadCrumbs: true
+showBreadCrumbs: false
 ---
 
 ## 👋 Xin chào! Tôi là Xuân Dương

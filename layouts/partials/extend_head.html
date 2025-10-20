@@ -12,10 +12,20 @@
 {{- $customHomeCSS = $customHomeCSS | resources.Minify | resources.Fingerprint -}}
 <link rel="stylesheet" href="{{ $customHomeCSS.RelPermalink }}" integrity="{{ $customHomeCSS.Data.Integrity }}">
 {{- end -}}
+{{- $homeModernCSS := resources.Get "css/home-modern.css" -}}
+{{- if $homeModernCSS -}}
+{{- $homeModernCSS = $homeModernCSS | resources.Minify | resources.Fingerprint -}}
+<link rel="stylesheet" href="{{ $homeModernCSS.RelPermalink }}" integrity="{{ $homeModernCSS.Data.Integrity }}">
+{{- end -}}
 {{- $themeOverrideCSS := resources.Get "css/theme-override.css" -}}
 {{- if $themeOverrideCSS -}}
 {{- $themeOverrideCSS = $themeOverrideCSS | resources.Minify | resources.Fingerprint -}}
 <link rel="stylesheet" href="{{ $themeOverrideCSS.RelPermalink }}" integrity="{{ $themeOverrideCSS.Data.Integrity }}">
+{{- end -}}
+{{- $fullWidthCSS := resources.Get "css/full-width.css" -}}
+{{- if $fullWidthCSS -}}
+{{- $fullWidthCSS = $fullWidthCSS | resources.Minify | resources.Fingerprint -}}
+<link rel="stylesheet" href="{{ $fullWidthCSS.RelPermalink }}" integrity="{{ $fullWidthCSS.Data.Integrity }}">
 {{- end -}}
 
 <!-- Meta tags for better SEO -->
@@ -32,10 +42,10 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:creator" content="@xuanduong">
 
-<!-- Favicon -->
-<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+<!-- Favicon - Commented out until favicon files are created -->
+<!-- <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
-<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png"> -->
 
 <!-- Canonical URL -->
 {{ if .Permalink }}

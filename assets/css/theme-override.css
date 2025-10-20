@@ -560,3 +560,93 @@ input:focus-visible {
     margin-bottom: 32px;
 }
 
+/* ============================================
+   COMPACT HEADER STYLES
+   Giảm kích thước header để gọn gàng hơn
+   ============================================ */
+
+/* Main header container */
+header.header {
+    height: 50px !important;
+    padding: 0 1.5rem !important;
+    min-height: 50px !important;
+}
+
+/* Logo adjustments */
+.logo {
+    font-size: 18px !important;
+    font-weight: 600 !important;
+}
+
+.logo img {
+    height: 24px !important;
+    width: auto !important;
+}
+
+/* Navigation menu */
+.nav #menu {
+    font-size: 0.9rem !important;
+    gap: 1.5rem !important;
+}
+
+.nav #menu a {
+    padding: 0.25rem 0.5rem !important;
+}
+
+/* Theme toggle button */
+#theme-toggle {
+    width: 32px !important;
+    height: 32px !important;
+    padding: 4px !important;
+}
+
+#theme-toggle svg {
+    width: 20px !important;
+    height: 20px !important;
+}
+
+/* Language switcher */
+.lang-switch {
+    font-size: 0.9rem !important;
+}
+
+/* Search button if exists */
+#searchBtn {
+    width: 32px !important;
+    height: 32px !important;
+    padding: 4px !important;
+}
+
+/* Mobile menu button */
+#menu-trigger {
+    width: 32px !important;
+    height: 32px !important;
+}
+
+/* Reduce gaps between header items */
+.header .logo,
+.header .menu {
+    gap: 1rem !important;
+}
+
+/* Compact responsive adjustments */
+@media screen and (max-width: 768px) {
+    header.header {
+        height: 48px !important;
+        padding: 0 1rem !important;
+        min-height: 48px !important;
+    }
+    
+    .logo {
+        font-size: 16px !important;
+    }
+    
+    .logo img {
+        height: 20px !important;
+    }
+    
+    .nav #menu {
+        font-size: 0.85rem !important;
+    }
+}
+

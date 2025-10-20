@@ -7,14 +7,42 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### 🎨 In Progress - Modern Home Layout
+
+#### Added (2025-10-19)
+- ✅ **Modern Home Page Layout** - Complete redesign
+  - Hero section with gradient background
+  - Featured posts grid (3 columns)
+  - Projects showcase with tech stack
+  - Timeline sidebar
+  - CTA section
+  - Smooth animations & transitions
+  - Dark mode support
+  - Fully responsive design
+
+**Files Created:**
+- `layouts/index.html` - New home page template
+- `assets/css/home-modern.css` - Modern styling
+- `docs/HOME_MODERN_LAYOUT.md` - Documentation
+
+**Files Modified:**
+- `config.toml` - Disabled profileMode
+- `layouts/partials/extend_head.html` - Added CSS import
+
+**Features:**
+- Shimmer text animation
+- Card hover effects
+- Gradient backgrounds
+- Smooth fade-in animations
+- Sticky timeline sidebar
+- Responsive breakpoints
+- Dark mode transitions
+
 ### Planned Features
 - [ ] SEO.md documentation
-- [ ] Search functionality
 - [ ] Comments system (Disqus/Utterances)
 - [ ] Newsletter subscription
 - [ ] Related posts feature
-- [ ] Reading progress bar
-- [ ] Table of contents sidebar
 - [ ] Social share buttons optimization
 - [ ] Multi-language support
 
