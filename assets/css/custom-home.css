@@ -52,7 +52,7 @@ body {
 ======================================== */
 .profile {
   text-align: center;
-  padding: 60px 20px 100px;
+  padding: 60px 40px 100px; /* Tăng padding trái-phải từ 20px lên 40px */
   position: relative;
 }
 
@@ -75,15 +75,16 @@ body {
   z-index: 1;
   max-width: 800px;
   margin: 0 auto;
+  padding: 0 20px; /* Thêm padding bên trong để tạo khoảng trắng */
 }
 
 /* ========================================
    🖼️ AVATAR SECTION (Fixed & Perfectly Centered)
 ======================================== */
 .profile .profile-avatar {
-  width: 200px;
-  height: 280px;
-  margin: 0 auto 28px;
+  width: 260px;  /* Tăng từ 200px */
+  height: 340px; /* Tăng từ 280px - giữ tỉ lệ 1:1.3 */
+  margin: 40px auto 36px; /* Tăng margin top và bottom để tạo khoảng trắng */
   border-radius: 16px;
   border: 4px solid rgba(11, 91, 215, 0.4);
   box-shadow:
@@ -101,11 +102,10 @@ body {
 .profile .profile-avatar img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  object-position: center top; /* canh giữa theo chiều dọc, hơi lên 1 chút */
+  object-fit: cover; /* Giữ tỉ lệ ảnh, không méo */
+  object-position: center center; /* Canh giữa hoàn toàn */
   border-radius: 16px;
-  image-rendering: -webkit-optimize-contrast;
-  image-rendering: crisp-edges;
+  image-rendering: auto; /* Để trình duyệt tự tối ưu chất lượng */
   transition: transform 0.4s ease;
 }
 
@@ -427,12 +427,17 @@ body {
 ======================================== */
 @media (max-width: 768px) {
   .profile {
-    padding: 40px 16px 60px;
+    padding: 40px 24px 60px; /* Tăng padding trái-phải cho mobile */
+  }
+  
+  .profile .profile_inner {
+    padding: 0 12px; /* Giảm padding bên trong cho mobile */
   }
   
   .profile .profile-avatar {
-    width: 160px;
-    height: 220px;
+    width: 200px;  /* Giảm xuống cho mobile */
+    height: 260px; /* Giữ tỉ lệ */
+    margin: 30px auto 28px;
     border-width: 3px;
   }
   
@@ -471,6 +476,20 @@ body {
 }
 
 @media (max-width: 480px) {
+  .profile {
+    padding: 30px 16px 50px; /* Padding nhỏ hơn cho màn hình rất nhỏ */
+  }
+  
+  .profile .profile_inner {
+    padding: 0 8px;
+  }
+  
+  .profile .profile-avatar {
+    width: 170px;  /* Nhỏ hơn nữa cho màn hình siêu nhỏ */
+    height: 220px;
+    margin: 20px auto 24px;
+  }
+  
   .profile h1 {
     font-size: 28px;
   }

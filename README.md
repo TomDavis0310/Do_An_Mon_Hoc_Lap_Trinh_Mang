@@ -300,15 +300,54 @@ Nếu bạn tìm thấy lỗi hoặc muốn đề xuất cải tiến:
 
 Project này được phân phối dưới giấy phép MIT. Xem file [LICENSE](LICENSE) để biết thêm chi tiết.
 
-## 📞 Liên hệ
+## � Tài liệu Báo cáo Đồ án
+
+### File báo cáo chính thức
+
+1. **[BAO_CAO_DO_AN.md](BAO_CAO_DO_AN.md)** - Báo cáo chính (60-80 trang)
+   - Giới thiệu đầy đủ
+   - Phân tích thiết kế
+   - Triển khai chi tiết
+   - Kết quả và đánh giá
+
+2. **[docs/BAO_CAO_TOM_TAT.md](docs/BAO_CAO_TOM_TAT.md)** - Báo cáo tóm tắt (8-10 trang)
+   - Executive summary
+   - Kết quả nhanh
+   - Metrics chính
+
+3. **[docs/HUONG_DAN_BAO_CAO.md](docs/HUONG_DAN_BAO_CAO.md)** - Hướng dẫn
+   - Cách tạo báo cáo
+   - Hướng dẫn thuyết trình
+   - Q&A và tips
+
+4. **[docs/README_BAO_CAO.md](docs/README_BAO_CAO.md)** - Index báo cáo
+   - Hướng dẫn sử dụng
+   - Template slide
+   - Checklist
+
+5. **[TOM_TAT_NHANH.md](TOM_TAT_NHANH.md)** - Quick reference
+   - Thông tin nhanh
+   - Kết quả chính
+   - Hướng dẫn sử dụng
+
+### Tài liệu kỹ thuật
+
+- **[QUICKSTART.md](docs/QUICKSTART.md)** - Quick start guide
+- **[DEPLOYMENT.md](docs/DEPLOYMENT.md)** - Deployment guide
+- **[STRUCTURE.md](docs/STRUCTURE.md)** - Project structure
+- **[TROUBLESHOOTING.md](docs/TROUBLESHOOTING.md)** - Common issues
+- **[WRITING_GUIDE.md](docs/WRITING_GUIDE.md)** - Content guide
+
+## �📞 Liên hệ
 
 **Nguyễn Võ Xuân Dương**
 
 - 🌐 Website: [Blog của tôi](https://tomdavis0310.github.io/Do_An_Mon_Hoc_Lap_Trinh_Mang/)
 - 💼 LinkedIn: [linkedin.com/in/xuanduong](https://linkedin.com/in/xuanduong)
-- 📧 Email: xuanduong@example.com
+- 📧 Email: doduong0949447395@gmail.com
 - 🐙 GitHub: [@TomDavis0310](https://github.com/TomDavis0310)
-- 📘 Facebook: [facebook.com/xuanduong](https://facebook.com/xuanduong)
+- 📘 Facebook: [facebook.com/duong.xuan.534908](https://www.facebook.com/duong.xuan.534908/)
+- 📱 Phone: 094.944.7395
 
 ## 🙏 Acknowledgments
 

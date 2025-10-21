@@ -167,10 +167,11 @@
 .hero-title {
   font-size: clamp(1.75rem, 4.5vw, 3rem);
   font-weight: 700;
-  line-height: 1.2;
+  line-height: 1.3;
   color: white;
   margin-bottom: 1.25rem;
   animation: fadeInUp 0.8s ease-out 0.2s both;
+  text-align: left;
 }
 
 .gradient-text {
@@ -179,16 +180,21 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  padding: 0.2rem 0.5rem;
-  border-radius: 0.5rem;
+  padding: 0 0.3rem;
+  font-weight: 800;
+  white-space: nowrap; /* Giữ "ứng dụng web" trên 1 dòng */
 }
 
 .highlight-name {
+  display: inline-block;
   font-family: 'Courier New', monospace;
-  background: rgba(255, 255, 255, 0.15);
-  padding: 0.2rem 0.8rem;
-  border-radius: 0.5rem;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 0.15rem 0.6rem;
+  border-radius: 0.4rem;
   backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  font-weight: 700;
+  white-space: nowrap; /* Giữ "Nguyễn Võ Xuân Dương" trên 1 dòng */
 }
 
 .hero-description {
@@ -638,6 +644,10 @@
     text-align: center;
   }
   
+  .hero-title {
+    text-align: center;
+  }
+  
   .hero-buttons {
     justify-content: center;
   }
@@ -670,6 +680,11 @@
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
   }
   
+  .hero-title {
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    line-height: 1.4;
+  }
+  
   .avatar-container {
     width: 220px;
     height: 220px;
@@ -692,6 +707,10 @@
 }
 
 @media (max-width: 480px) {
+  .hero-title {
+    font-size: 1.5rem;
+  }
+  
   .hero-buttons {
     flex-direction: column;
     width: 100%;
