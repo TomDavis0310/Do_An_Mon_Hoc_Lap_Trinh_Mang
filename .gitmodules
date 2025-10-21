@@ -1,3 +1,3 @@
-[submodule "blog cá nhân/themes/PaperMod"]
-	path = blog cá nhân/themes/PaperMod
+[submodule "themes/PaperMod"]
+	path = themes/PaperMod
 	url = https://github.com/adityatelange/hugo-PaperMod.git
