@@ -9,7 +9,7 @@ showBreadCrumbs: false
 ---
 
 <div style="text-align: center; margin: 2rem 0;">
-  <img src="/Do_An_Mon_Hoc_Lap_Trinh_Mang/images/profile.jpg" alt="Nguyễn Võ Xuân Dương" style="width: 180px; height: 180px; border-radius: 50%; object-fit: cover; border: 4px solid var(--theme); box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
+  <img src="/Do_An_Mon_Hoc_Lap_Trinh_Mang/images/profile.jpg" alt="Nguyễn Võ Xuân Dương" style="width: 400px; height: 280px; border-radius: 1.5rem; object-fit: contain; border: 4px solid var(--theme); box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
 </div>
 
 ## 👋 Xin chào! Tôi là Xuân Dương
